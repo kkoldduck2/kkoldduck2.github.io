@@ -1,0 +1,962 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>카카오 등산코스 정하기 - Woodi’s devlog</title>
+<meta name="description" content="문제">
+
+
+  <meta name="author" content="Woodi">
+  
+  <meta property="article:author" content="Woodi">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Woodi's devlog">
+<meta property="og:title" content="카카오 등산코스 정하기">
+<meta property="og:url" content="http://localhost:4000/fail/kakao_118669/">
+
+
+  <meta property="og:description" content="문제">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-09-12T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/fail/kakao_118669/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Woodi",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+  <meta name="naver-site-verification" content="60f54dab9066d21d531c478365d1ad44a3cd075e">
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Woodi's devlog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Woodi's devlog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/">Category</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tag</a>
+            </li><li class="masthead__menu-item">
+              <a href="/search/">Search</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#fail" itemprop="item"><span itemprop="name">Fail</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">카카오 등산코스 정하기</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Woodi</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Woodi의 기술 블로그입니다.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">South Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:vkqmffjtm@naver.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/kkoldduck2" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+
+  
+    <!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+
+
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <!--전체 글 수-->
+      <li>
+            📂 <span style="font-family:'Cafe24Oneprettynight';">전체 글 수</style> <span style="font-family:'Coming Soon';">4</style> <span style="font-family:'Cafe24Oneprettynight';">개</style> 
+      </li>
+      <li>
+        <!--span 태그로 카테고리들을 크게 분류 -->
+        <span class="nav__sub-title">CS</span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
+                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+                
+                    
+                        <li><a href="/categories/os" class=""> OS (2)</a></li>
+                    
+                
+                    
+                
+                    
+                
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul> 
+        <span class="nav__sub-title">Algorithm</span>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                        <li><a href="/categories/fail" class="">알고리즘 Fail (1)</a></li>
+                    
+                
+                    
+                
+            </ul>
+        <span class="nav__sub-title">개발</span>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                        <li><a href="/categories/opensource" class="">오픈소스 컨트리뷰션 (1)</a></li>
+                    
+                
+            </ul>
+            
+      </li>
+  </ul>
+</nav>
+  
+
+  </div>
+
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="카카오 등산코스 정하기">
+    <meta itemprop="description" content="문제">
+    <meta itemprop="datePublished" content="2022-09-12T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/fail/kakao_118669/" class="u-url" itemprop="url">카카오 등산코스 정하기
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-09-12T00:00:00+09:00">2022-09-12</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#문제">문제</a></li><li><a href="#내-풀이">내 풀이</a></li><li><a href="#해설">해설</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h3 id="문제">문제</h3>
+
+<p><a href="https://school.programmers.co.kr/learn/courses/30/lessons/118669?language=java#">코딩테스트 연습 - 등산코스 정하기</a></p>
+
+<p><strong>문제 요약</strong></p>
+
+<ul>
+  <li>등산코스를 따라 이동하는 중 쉼터 혹은 산봉우리를 방문할 때마다 휴식을 취할 수 있으며, 휴식 없이 이동해야 하는 시간 중 가장 긴 시간을 해당 등산코스의 <code class="language-plaintext highlighter-rouge">intensity</code>라고 부른다.</li>
+  <li>등산 코스에서 출입구는 처음과 끝에 한 번씩, 산봉우리는 한 번만 포함되어야 한다.</li>
+  <li>intensity가 최소가 되도록 등산코스를 정하라.</li>
+</ul>
+
+<h3 id="내-풀이">내 풀이</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Programmers_118669</span> <span class="o">{</span>
+	<span class="kd">static</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Edge</span><span class="o">&gt;[]</span> <span class="n">graph</span><span class="o">;</span>
+	<span class="kd">static</span> <span class="kt">int</span> <span class="no">N</span><span class="o">;</span>
+	<span class="kd">static</span> <span class="kt">boolean</span><span class="o">[]</span> <span class="n">isGate</span><span class="o">;</span>
+	<span class="kd">static</span> <span class="kt">boolean</span><span class="o">[]</span> <span class="n">isSummit</span><span class="o">;</span>
+	<span class="kd">static</span> <span class="kd">class</span> <span class="nc">Edge</span> <span class="kd">implements</span> <span class="nc">Comparable</span><span class="o">&lt;</span><span class="nc">Edge</span><span class="o">&gt;{</span>
+		<span class="kt">int</span> <span class="n">to</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">w</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">maxIntensity</span><span class="o">;</span>
+		<span class="kd">public</span> <span class="nf">Edge</span><span class="o">(</span><span class="kt">int</span> <span class="n">to</span><span class="o">,</span> <span class="kt">int</span> <span class="n">w</span><span class="o">,</span> <span class="kt">int</span> <span class="n">maxIntensity</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">this</span><span class="o">.</span><span class="na">to</span> <span class="o">=</span> <span class="n">to</span><span class="o">;</span>
+			<span class="k">this</span><span class="o">.</span><span class="na">w</span> <span class="o">=</span> <span class="n">w</span><span class="o">;</span>
+			<span class="k">this</span><span class="o">.</span><span class="na">maxIntensity</span> <span class="o">=</span> <span class="n">maxIntensity</span><span class="o">;</span> 
+		<span class="o">}</span>
+		
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">int</span> <span class="nf">compareTo</span><span class="o">(</span><span class="nc">Edge</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">w</span> <span class="o">-</span> <span class="n">o</span><span class="o">.</span><span class="na">w</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+	
+	<span class="c1">// gate -&gt; summit intensity</span>
+	<span class="kd">static</span> <span class="kt">int</span> <span class="nf">getIntensity</span><span class="o">(</span><span class="kt">int</span> <span class="n">gate</span><span class="o">,</span> <span class="kt">int</span> <span class="n">summit</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"gate : "</span><span class="o">+</span><span class="n">gate</span><span class="o">+</span><span class="s">", summit : "</span><span class="o">+</span><span class="n">summit</span><span class="o">);</span>
+		<span class="kt">boolean</span><span class="o">[]</span> <span class="n">visited</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">boolean</span><span class="o">[</span><span class="no">N</span><span class="o">+</span><span class="mi">1</span><span class="o">];</span>
+		<span class="n">visited</span><span class="o">[</span><span class="n">gate</span><span class="o">]</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+		
+		
+		<span class="nc">PriorityQueue</span><span class="o">&lt;</span><span class="nc">Edge</span><span class="o">&gt;</span> <span class="n">pq</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PriorityQueue</span><span class="o">&lt;&gt;();</span>
+		<span class="k">for</span><span class="o">(</span><span class="nc">Edge</span> <span class="n">e</span> <span class="o">:</span> <span class="n">graph</span><span class="o">[</span><span class="n">gate</span><span class="o">])</span> <span class="o">{</span>
+			<span class="n">pq</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+		<span class="o">}</span>
+		
+		<span class="kt">int</span> <span class="n">intensityRst</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">;</span>
+		
+		<span class="c1">// visit 체크를 언제 해줘야하지?</span>
+		<span class="k">while</span><span class="o">(!</span><span class="n">pq</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+			<span class="nc">Edge</span> <span class="n">now</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
+			<span class="n">visited</span><span class="o">[</span><span class="n">now</span><span class="o">.</span><span class="na">to</span><span class="o">]</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+			
+			<span class="k">if</span><span class="o">(</span><span class="n">now</span><span class="o">.</span><span class="na">to</span> <span class="o">==</span> <span class="n">summit</span><span class="o">)</span> <span class="o">{</span>
+				<span class="n">intensityRst</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">now</span><span class="o">.</span><span class="na">maxIntensity</span><span class="o">,</span> <span class="n">intensityRst</span><span class="o">);</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"arrive : "</span><span class="o">+</span><span class="n">now</span><span class="o">.</span><span class="na">to</span><span class="o">+</span><span class="s">", "</span><span class="o">+</span><span class="n">now</span><span class="o">.</span><span class="na">w</span><span class="o">+</span><span class="s">", "</span><span class="o">+</span><span class="n">intensityRst</span><span class="o">);</span>
+<span class="c1">//				break;</span>
+			<span class="o">}</span> <span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">isSummit</span><span class="o">[</span><span class="n">now</span><span class="o">.</span><span class="na">to</span><span class="o">]</span> <span class="o">||</span> <span class="n">isGate</span><span class="o">[</span><span class="n">now</span><span class="o">.</span><span class="na">to</span><span class="o">])</span> <span class="o">{</span>
+				<span class="k">continue</span><span class="o">;</span>
+			<span class="o">}</span>
+			
+			<span class="k">for</span><span class="o">(</span><span class="nc">Edge</span> <span class="n">next</span> <span class="o">:</span> <span class="n">graph</span><span class="o">[</span><span class="n">now</span><span class="o">.</span><span class="na">to</span><span class="o">])</span> <span class="o">{</span>
+				<span class="k">if</span><span class="o">(!</span><span class="n">visited</span><span class="o">[</span><span class="n">next</span><span class="o">.</span><span class="na">to</span><span class="o">])</span> <span class="o">{</span>
+					<span class="kt">int</span> <span class="n">biggerIntensity</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">now</span><span class="o">.</span><span class="na">maxIntensity</span><span class="o">,</span> <span class="n">next</span><span class="o">.</span><span class="na">w</span><span class="o">);</span>
+					<span class="n">pq</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Edge</span><span class="o">(</span><span class="n">next</span><span class="o">.</span><span class="na">to</span><span class="o">,</span> <span class="n">next</span><span class="o">.</span><span class="na">w</span><span class="o">,</span> <span class="n">biggerIntensity</span><span class="o">));</span>
+					
+				<span class="o">}</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+		
+		<span class="k">return</span> <span class="n">intensityRst</span><span class="o">;</span>
+	<span class="o">}</span> 
+	
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">solution</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">,</span> <span class="kt">int</span><span class="o">[][]</span> <span class="n">paths</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">gates</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">summits</span><span class="o">)</span> <span class="o">{</span>
+		<span class="no">N</span> <span class="o">=</span> <span class="n">n</span><span class="o">;</span>
+		<span class="n">isGate</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">boolean</span><span class="o">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="o">];</span>
+		<span class="n">isSummit</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">boolean</span><span class="o">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="o">];</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">gates</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">isGate</span><span class="o">[</span><span class="n">gates</span><span class="o">[</span><span class="n">i</span><span class="o">]]</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">summits</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">isSummit</span><span class="o">[</span><span class="n">summits</span><span class="o">[</span><span class="n">i</span><span class="o">]]</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+		<span class="o">}</span>
+		
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">answer</span> <span class="o">=</span> <span class="o">{};</span>
+        <span class="c1">// 그래프 만들기</span>
+        <span class="n">graph</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="o">];</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        	<span class="n">graph</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+        <span class="o">}</span>
+        
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">paths</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        	<span class="kt">int</span> <span class="n">u</span> <span class="o">=</span> <span class="n">paths</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">0</span><span class="o">];</span>
+        	<span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="n">paths</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">1</span><span class="o">];</span>
+        	<span class="kt">int</span> <span class="n">w</span> <span class="o">=</span> <span class="n">paths</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">2</span><span class="o">];</span>
+        	
+        	<span class="k">if</span><span class="o">(</span><span class="n">isGate</span><span class="o">[</span><span class="n">u</span><span class="o">]</span> <span class="o">||</span> <span class="n">isSummit</span><span class="o">[</span><span class="n">v</span><span class="o">])</span> <span class="o">{</span>
+        		<span class="n">graph</span><span class="o">[</span><span class="n">u</span><span class="o">].</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Edge</span><span class="o">(</span><span class="n">v</span><span class="o">,</span> <span class="n">w</span><span class="o">,</span> <span class="n">w</span><span class="o">));</span>
+        	<span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">isGate</span><span class="o">[</span><span class="n">v</span><span class="o">]</span> <span class="o">||</span> <span class="n">isSummit</span><span class="o">[</span><span class="n">u</span><span class="o">])</span> <span class="o">{</span>
+        		<span class="n">graph</span><span class="o">[</span><span class="n">v</span><span class="o">].</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Edge</span><span class="o">(</span><span class="n">u</span><span class="o">,</span><span class="n">w</span><span class="o">,</span> <span class="n">w</span><span class="o">));</span>
+        	<span class="o">}</span><span class="k">else</span> <span class="o">{</span>
+        		<span class="n">graph</span><span class="o">[</span><span class="n">u</span><span class="o">].</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Edge</span><span class="o">(</span><span class="n">v</span><span class="o">,</span> <span class="n">w</span><span class="o">,</span> <span class="n">w</span><span class="o">));</span>
+        		<span class="n">graph</span><span class="o">[</span><span class="n">v</span><span class="o">].</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Edge</span><span class="o">(</span><span class="n">u</span><span class="o">,</span><span class="n">w</span><span class="o">,</span> <span class="n">w</span><span class="o">));</span>
+        	<span class="o">}</span>
+        <span class="o">}</span>
+        
+        <span class="kt">int</span> <span class="n">minIntensity</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">minSummit</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+        
+        <span class="c1">// 출발지 선택</span>
+        <span class="c1">// summit 선택</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">gates</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        	<span class="kt">int</span> <span class="n">gate</span> <span class="o">=</span> <span class="n">gates</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+        	<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">summits</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+        		<span class="kt">int</span> <span class="n">summit</span> <span class="o">=</span> <span class="n">summits</span><span class="o">[</span><span class="n">j</span><span class="o">];</span>
+        		<span class="c1">// 출발지 -&gt; summit -&gt; 출발지에 대한 intensity 구하기 -&gt; 최소인 경우 산봉우리 번호, intensity update</span>
+        		<span class="kt">int</span> <span class="n">intensity</span> <span class="o">=</span> <span class="n">getIntensity</span><span class="o">(</span><span class="n">gate</span><span class="o">,</span> <span class="n">summit</span><span class="o">);</span>
+        		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"back : "</span><span class="o">+</span><span class="n">gate</span><span class="o">+</span><span class="s">", "</span><span class="o">+</span><span class="n">summit</span><span class="o">+</span><span class="s">", "</span><span class="o">+</span><span class="n">intensity</span><span class="o">);</span>
+        		
+        		<span class="k">if</span><span class="o">(</span><span class="n">minIntensity</span> <span class="o">&gt;</span> <span class="n">intensity</span><span class="o">)</span> <span class="o">{</span>
+        			<span class="n">minIntensity</span> <span class="o">=</span> <span class="n">intensity</span><span class="o">;</span>
+        			<span class="n">minSummit</span> <span class="o">=</span> <span class="n">summit</span><span class="o">;</span>
+        		<span class="o">}</span>
+        	<span class="o">}</span>
+        <span class="o">}</span>
+        
+        <span class="n">answer</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]</span> <span class="o">{</span><span class="n">minSummit</span><span class="o">,</span> <span class="n">minIntensity</span><span class="o">};</span>
+        <span class="k">return</span> <span class="n">answer</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>헷갈린 부분 : visit 체크</li>
+  <li>정답은 맞는데 시간 초과 뜸 → 최적화 필요</li>
+  <li>최적화 대상 → 이중 for 문 제거, 다익스트라 → 모든 gate에서 모든 정점 대상으로 최소값 갱신만 해주면 된다. (다익스트라라고 하는데 다익스트라는 아닌듯. 비슷한데 다름)</li>
+</ul>
+
+<h3 id="해설">해설</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Programmers_118669</span> <span class="o">{</span>
+	<span class="kd">static</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Edge</span><span class="o">&gt;[]</span> <span class="n">graph</span><span class="o">;</span>
+	<span class="kd">static</span> <span class="kd">class</span> <span class="nc">Edge</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">to</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">w</span><span class="o">;</span>
+		<span class="kd">public</span> <span class="nf">Edge</span><span class="o">(</span><span class="kt">int</span> <span class="n">to</span><span class="o">,</span> <span class="kt">int</span> <span class="n">w</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">this</span><span class="o">.</span><span class="na">to</span> <span class="o">=</span> <span class="n">to</span><span class="o">;</span>
+			<span class="k">this</span><span class="o">.</span><span class="na">w</span> <span class="o">=</span> <span class="n">w</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+	
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">dijkstra</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">gates</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">summits</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Queue</span><span class="o">&lt;</span><span class="nc">Edge</span><span class="o">&gt;</span> <span class="n">q</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
+		<span class="kt">int</span><span class="o">[]</span> <span class="n">intensity</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="o">];</span>	<span class="c1">// intensity[i] : i번 노드까지 모든 출발지 -&gt; 모든 노드까지의 모든 경로 중에서 최소 intensity가 담긴다. </span>
+		
+		<span class="nc">Arrays</span><span class="o">.</span><span class="na">fill</span><span class="o">(</span><span class="n">intensity</span><span class="o">,</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">);</span>
+		
+		<span class="c1">// 출입구 전부를 큐에 넣음</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">gate</span> <span class="o">:</span> <span class="n">gates</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">q</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Edge</span><span class="o">(</span><span class="n">gate</span><span class="o">,</span> <span class="mi">0</span><span class="o">));</span>		<span class="c1">// 이때 가중치를 0으로 넣음. 의미적으로 가중치가 아니라 intensity</span>
+			<span class="n">intensity</span><span class="o">[</span><span class="n">gate</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> 
+		<span class="o">}</span>
+		
+		<span class="k">while</span><span class="o">(!</span><span class="n">q</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+			<span class="nc">Edge</span> <span class="n">now</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
+			
+			<span class="k">if</span><span class="o">(</span><span class="n">now</span><span class="o">.</span><span class="na">w</span> <span class="o">&lt;</span> <span class="n">intensity</span><span class="o">[</span><span class="n">now</span><span class="o">.</span><span class="na">to</span><span class="o">])</span> <span class="k">continue</span><span class="o">;</span>	<span class="c1">// pruning</span>
+			
+			<span class="k">for</span><span class="o">(</span><span class="nc">Edge</span> <span class="n">next</span> <span class="o">:</span> <span class="n">graph</span><span class="o">[</span><span class="n">now</span><span class="o">.</span><span class="na">to</span><span class="o">])</span> <span class="o">{</span>
+				<span class="c1">// next.to까지의 최소 intensity 갱신</span>
+				<span class="kt">int</span> <span class="n">dis</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">intensity</span><span class="o">[</span><span class="n">now</span><span class="o">.</span><span class="na">to</span><span class="o">],</span> <span class="n">next</span><span class="o">.</span><span class="na">w</span><span class="o">);</span>
+				<span class="k">if</span><span class="o">(</span><span class="n">intensity</span><span class="o">[</span><span class="n">next</span><span class="o">.</span><span class="na">to</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">dis</span><span class="o">)</span> <span class="o">{</span>
+					<span class="n">intensity</span><span class="o">[</span><span class="n">next</span><span class="o">.</span><span class="na">to</span><span class="o">]</span> <span class="o">=</span> <span class="n">dis</span><span class="o">;</span>
+					<span class="n">q</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Edge</span><span class="o">(</span><span class="n">next</span><span class="o">.</span><span class="na">to</span><span class="o">,</span> <span class="n">dis</span><span class="o">));</span>
+				<span class="o">}</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+		
+		<span class="kt">int</span> <span class="n">rstSummit</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">rstIntensity</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">;</span>
+		
+		<span class="nc">Arrays</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">summits</span><span class="o">);</span>
+		
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">summit</span> <span class="o">:</span> <span class="n">summits</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">intensity</span><span class="o">[</span><span class="n">summit</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">rstIntensity</span><span class="o">)</span> <span class="o">{</span>
+				<span class="n">rstSummit</span> <span class="o">=</span> <span class="n">summit</span><span class="o">;</span>
+				<span class="n">rstIntensity</span> <span class="o">=</span> <span class="n">intensity</span><span class="o">[</span><span class="n">summit</span><span class="o">];</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+		
+		<span class="k">return</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]</span> <span class="o">{</span><span class="n">rstSummit</span><span class="o">,</span> <span class="n">rstIntensity</span><span class="o">};</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">solution</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">,</span> <span class="kt">int</span><span class="o">[][]</span> <span class="n">paths</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">gates</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">summits</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">boolean</span><span class="o">[]</span> <span class="n">isGate</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">boolean</span><span class="o">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="o">];</span>
+		<span class="kt">boolean</span><span class="o">[]</span> <span class="n">isSummit</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">boolean</span><span class="o">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="o">];</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">gates</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">isGate</span><span class="o">[</span><span class="n">gates</span><span class="o">[</span><span class="n">i</span><span class="o">]]</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">summits</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">isSummit</span><span class="o">[</span><span class="n">summits</span><span class="o">[</span><span class="n">i</span><span class="o">]]</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+		<span class="o">}</span>
+		
+        <span class="c1">// 그래프 만들기</span>
+        <span class="n">graph</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="o">];</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        	<span class="n">graph</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+        <span class="o">}</span>
+        
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">paths</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        	<span class="kt">int</span> <span class="n">u</span> <span class="o">=</span> <span class="n">paths</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">0</span><span class="o">];</span>
+        	<span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="n">paths</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">1</span><span class="o">];</span>
+        	<span class="kt">int</span> <span class="n">w</span> <span class="o">=</span> <span class="n">paths</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">2</span><span class="o">];</span>
+        	
+        	<span class="k">if</span><span class="o">(</span><span class="n">isGate</span><span class="o">[</span><span class="n">u</span><span class="o">]</span> <span class="o">||</span> <span class="n">isSummit</span><span class="o">[</span><span class="n">v</span><span class="o">])</span> <span class="o">{</span>
+        		<span class="n">graph</span><span class="o">[</span><span class="n">u</span><span class="o">].</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Edge</span><span class="o">(</span><span class="n">v</span><span class="o">,</span> <span class="n">w</span><span class="o">));</span>
+        	<span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">isGate</span><span class="o">[</span><span class="n">v</span><span class="o">]</span> <span class="o">||</span> <span class="n">isSummit</span><span class="o">[</span><span class="n">u</span><span class="o">])</span> <span class="o">{</span>
+        		<span class="n">graph</span><span class="o">[</span><span class="n">v</span><span class="o">].</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Edge</span><span class="o">(</span><span class="n">u</span><span class="o">,</span><span class="n">w</span><span class="o">));</span>
+        	<span class="o">}</span><span class="k">else</span> <span class="o">{</span>
+        		<span class="n">graph</span><span class="o">[</span><span class="n">u</span><span class="o">].</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Edge</span><span class="o">(</span><span class="n">v</span><span class="o">,</span> <span class="n">w</span><span class="o">));</span>
+        		<span class="n">graph</span><span class="o">[</span><span class="n">v</span><span class="o">].</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Edge</span><span class="o">(</span><span class="n">u</span><span class="o">,</span><span class="n">w</span><span class="o">));</span>
+        	<span class="o">}</span>
+        <span class="o">}</span>
+        
+        <span class="k">return</span> <span class="nf">dijkstra</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="n">gates</span><span class="o">,</span> <span class="n">summits</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>애초에 visit 체크도 안 넣는다.</li>
+  <li>모든 노드에 대한 intensity를 배열에 저장한다. (나는 Node 자체에 변수로 넣어두고, 최대값만 override했음) 
+⇒ 따라서 bfs 탐색을 한번만 하면 된다.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#118669%EB%B2%88" class="page__taxonomy-item p-category" rel="tag">118669번</a><span class="sep">, </span>
+    
+      <a href="/tags/#fail" class="page__taxonomy-item p-category" rel="tag">fail</a><span class="sep">, </span>
+    
+      <a href="/tags/#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98" class="page__taxonomy-item p-category" rel="tag">알고리즘</a><span class="sep">, </span>
+    
+      <a href="/tags/#%EC%B9%B4%EC%B9%B4%EC%98%A4" class="page__taxonomy-item p-category" rel="tag">카카오</a><span class="sep">, </span>
+    
+      <a href="/tags/#%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4" class="page__taxonomy-item p-category" rel="tag">프로그래머스</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#fail" class="page__taxonomy-item p-category" rel="tag">fail</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-09-12T00:00:00+09:00">2022-09-12</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%EC%B9%B4%EC%B9%B4%EC%98%A4+%EB%93%B1%EC%82%B0%EC%BD%94%EC%8A%A4+%EC%A0%95%ED%95%98%EA%B8%B0%20http%3A%2F%2Flocalhost%3A4000%2Ffail%2Fkakao_118669%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ffail%2Fkakao_118669%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ffail%2Fkakao_118669%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/os/first/" class="pagination--pager" title="첫 포스팅입니다.
+">이전</a>
+    
+    
+      <a href="/os/process_vs_thread/" class="pagination--pager" title="프로세스와 스레드 차이
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/opensource/zeppelin/" rel="permalink">제플린이란
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-09-12T00:00:00+09:00">2022-09-12</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  spark : 빅데이터 분석 도구, but CLI만 사용 가능
+  데이터 분석 업무를 하다보면, 여러가지 알고리즘과 파라미터를 바꿔가며 분석 결과를 반복해서 그래프나 테이블 같은 형태로 시각화하여 확인해야 하는데 커맨드 라인 도구는 불편하다.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/os/process_vs_thread/" rel="permalink">프로세스와 스레드 차이
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-09-12T00:00:00+09:00">2022-09-12</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">프로세스와 스레드의 차이
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/os/first/" rel="permalink">첫 포스팅입니다.
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-09-12T00:00:00+09:00">2022-09-12</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">오늘 처음 블로그를 만들었어요
+세부 목차 1
+앞으로 열심히 해보겠습니다.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/kkoldduck2" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 Woodi. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
