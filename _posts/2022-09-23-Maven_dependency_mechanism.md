@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "MyBatis와 MyBatis-Spring "
+title:  "Maven dependency Mechanism"
 categories: spring
-tag: [web, mybatis, spring]
+tag: [web, maven, spring]
 toc: true
 author_profile: true
 ---
