@@ -7,7 +7,7 @@ toc: true
 author_profile: true
 ---
 
-# TCP, UDP, Handshaking
+
 ## TCP
 
 - reliable, in-order byte stream (←→ udp : unreliable, message boundaries)
@@ -20,9 +20,9 @@ author_profile: true
 ![image](https://user-images.githubusercontent.com/47748246/192450690-45ea1427-57b0-4a29-bc1e-ef3bb243311b.png)
 
 - UDP
-    - 각 메시지가 독립적
+    - 각 메시지가 독립적 (not 연속적) → 서버는 소켓 하나로 여러 클라이언트와 통신할 수 있다. 
 - TCP
-    - 메시지가 byte-stream 형태 → 클라이언트 요청 별로 서버에서 소켓을 생성하는 이유
+    - 메시지가 byte-stream 형태 → 클라이언트 요청 별로 서버에서 소켓을 생성하는 이유 (각 클라이언트 별로 보내는 연속적인 메시지들 -> 어떤 클라이언트가 어떤 메시지 다음으로 보냈는지 구별하기 위해)
 
 ![image](https://user-images.githubusercontent.com/47748246/192450744-41e6cfaf-5655-4efc-9a03-28dc4d19b5b8.png)
 
