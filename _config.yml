@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Woodi"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Woodi의 기술 블로그입니다."
+  bio              : # "Woodi의 기술 블로그입니다."
   location         : "South Korea"
   email            :
   links:
