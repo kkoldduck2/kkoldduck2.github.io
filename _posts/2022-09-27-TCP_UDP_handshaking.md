@@ -37,6 +37,11 @@ author_profile: true
 2. 서버 → 클라이언트 : SYN 요청을 받고 요청을 수락하는 ACK와 SYN falg가 설정된 패킷을 발송. 이때 서버는 SYN_RECEIVED 상태
 3. 클라이언트 → 서버 : ACK을 보내고 TCP 연결이 완성. → 데이터가 오가게 됨
 
+
+![image](https://user-images.githubusercontent.com/47748246/209596760-6cfaab18-32f4-4ce2-b646-e59d4c171fd9.png)
+
+
+
 ### TCP 4-way-Handshaking
 
 - 세션을 종료하기 위해 사용됨
