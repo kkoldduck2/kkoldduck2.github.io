@@ -31,8 +31,7 @@ author_profile: true
 ### TCP 3-way-Handshaking
 
 - 양 쪽 모두 **데이터를 전송**할 준비가 되었다는 것을 보장
-
-![image](https://user-images.githubusercontent.com/47748246/192450776-b04711e2-78d5-4675-b76b-749cd38b09e8.png)
+![image](https://user-images.githubusercontent.com/47748246/209596070-e71afb8c-d61e-40e9-9348-479e889d0da4.png)
 
 1. 클라이언트 → 서버 : 접속을 요청하는 SYN 패킷을 보냄. 이때 클라이언트는 SYN_SENT 상태 (SYN/ACK 응답을 기다리는 상태)
 2. 서버 → 클라이언트 : SYN 요청을 받고 요청을 수락하는 ACK와 SYN falg가 설정된 패킷을 발송. 이때 서버는 SYN_RECEIVED 상태
