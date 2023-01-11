@@ -6,6 +6,18 @@ tag: [network, 네트워크, cs]
 toc: true
 author_profile: true
 ---
+## Transport Layer
+
+- 프로세스 간의 통신
+    - 가장 핵심 (기본) 기능 : muliplexing, demultiplexing
+- connectionless (UDP)에서 demux
+    - dest Ip, dest port만 알면 demultiplexing 가능
+        
+        → udp 메시지는 독립적임. 따라서 서버 프로세스는 소켓 하나로 여러 클라이언트와 통신할 수 있다. 
+        
+- connection oriented (TCP)에서 demux
+    - dest Ip, dest port, **source Ip, source port** 다 알아야 demultiplexing 가능 (→ 어떤 클라이언트의 요청인지 구분 → 그래야 소켓 구분 가능)
+    - TCP 메시지는 byte-stream 형태. 따라서 서버 프로세스는 door socket을 열어두고, 클라이언트로부터 요청이 올 때마다 해당 클라이언트를 위한 socket 생성
 
 
 ## TCP
